@@ -46,7 +46,7 @@ A type safe invocation of HTTP rest endpoints. Specification [here](https://micr
 The example calls one endpoint from another JAX-RS resource where generated Rest Client is injected as CDI bean.
 
 ### Create a docker image
-Build the project by executing the following command
+Build a docker for this project by executing the following command
 
     mvn verify
     docker build -t liberty-service-a:1.0 .

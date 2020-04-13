@@ -47,6 +47,7 @@ The example calls one endpoint from another JAX-RS resource where generated Rest
 
 ### Create a docker image
 Build the project by executing the following command
+
     mvn verify
     docker build -t liberty-service-a:1.0 .
 

@@ -21,8 +21,6 @@ unit and integration tests are run on pressing Enter in the command terminal; yo
 
     mvn liberty:dev
 
-
-
 To launch the test page, open your browser at the following URL
 
     http://localhost:9080/index.html
@@ -35,29 +33,20 @@ Also, a simple Hello world endpoint is created, have a look at the class **Hello
 
 More information on MicroProfile can be found [here](https://microprofile.io/)
 
-
-
-
-
-
 ### Health
 
 The health status can be used to determine if the 'computing node' needs to be discarded/restarted or not. Specification [here](https://microprofile.io/project/eclipse/microprofile-health)
 
 The class **ServiceHealthCheck** contains an example of a custom check which can be integrated to health status checks of the instance.  The index page contains a link to the status data.
 
-
-
-
-
-
-
-
-
-
-
 ### Rest Client
 
 A type safe invocation of HTTP rest endpoints. Specification [here](https://microprofile.io/project/eclipse/microprofile-rest-client)
 
 The example calls one endpoint from another JAX-RS resource where generated Rest Client is injected as CDI bean.
+
+### Create a docker image
+Build the project by executing the following command
+    mvn verify
+    docker build -t liberty-service-a:1.0 .
+
